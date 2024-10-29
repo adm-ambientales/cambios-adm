@@ -1,0 +1,134 @@
+.cv-header {
+    background-color: rgba(111, 247, 143, 0.8); /* Fondo del container */
+    color: #ffffff; /* Color del texto blanco */
+    padding: 30px; /* Espaciado interno más generoso */
+    border-radius: 15px; /* Bordes redondeados más pronunciados */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    margin-bottom: 40px; /* Margen inferior */
+    text-align: center; /* Centrar el texto */
+    position: relative; /* Para el efecto de línea */
+    border: 2px solid #ffd700; /* Borde dorado */
+}
+
+.cv-header h2 {
+    font-size: 36px; /* Tamaño de fuente para el título */
+    font-weight: 700; /* Peso de fuente más fuerte */
+    position: relative; /* Para el efecto de línea */
+    color: #ffd700; /* Color dorado para el texto */
+    text-transform: uppercase;
+}
+
+.cv-header h2::after {
+    content: '';
+    display: block;
+    width: 100px; /* Ancho de la línea */
+    height: 4px; /* Altura de la línea */
+    background-color: #ffffff; /* Color de la línea */
+    margin: 15px auto; /* Centrar la línea */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+
+.curriculum-vitae { /* Cambia esto por la ruta de tu imagen */
+    background-size: cover; /* Ajustar la imagen al tamaño de la sección */
+    background-position: center; /* Centrar la imagen */
+    position: relative; /* Para posicionar el pseudo-elemento */
+    padding: 60px 20px; /* Espaciado generoso */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+    margin: 40px 0; /* Margen superior e inferior */
+    text-align: center; /* Centrar el texto */
+    overflow: hidden; /* Evitar el desbordamiento */
+}
+
+.curriculum-vitae::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Colocar debajo del contenido */
+}
+
+
+.curriculum-vitae h2 {
+    font-size: 32px; /* Tamaño de fuente para el título */
+    color: #030303; /* Color verde para el título */
+    margin-bottom: 30px; /* Espaciado inferior */
+    position: relative;
+    font-weight: 700; /* Peso de fuente más fuerte */
+}
+
+.curriculum-vitae h2::after {
+    content: '';
+    display: block;
+    width: 70px; /* Ancho de la línea */
+    height: 4px; /* Altura de la línea */
+    background-color: #28a745; /* Color de la línea */
+    margin: 15px auto; /* Centrar la línea */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.cv-container {
+    display: flex; /* Usar flexbox para la distribución de tarjetas */
+    flex-direction: column; /* Colocar en columna */
+    align-items: center; /* Alinear al centro */
+    gap: 20px; /* Espaciado entre tarjetas */
+}
+
+.cv-card {
+    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 25px; /* Espaciado interno */
+    margin: 0; /* Sin margen entre tarjetas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más intensa */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
+    width: 100%; /* Ancho completo de la tarjeta */
+    max-width: 600px; /* Ancho máximo */
+    position: relative; /* Para el efecto de línea */
+}
+
+.cv-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Ancho de la línea */
+    height: 6px; /* Altura de la línea */
+    background-color: #28a745; /* Color de la línea */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para la línea */
+}
+
+.cv-card h3 {
+    font-size: 24px; /* Tamaño de fuente para subtítulos */
+    color: #343a40; /* Color del texto oscuro */
+    margin-bottom: 15px; /* Espaciado inferior */
+    font-weight: 600; /* Peso de fuente moderado */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.cv-card p {
+    font-size: 16px; /* Tamaño de fuente para párrafos */
+    color: #6c757d; /* Color del texto más claro */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #28a745; /* Color de la flecha */
+    margin: 20px auto; /* Centrar la flecha */
+    transition: transform 0.3s; /* Transición suave para el efecto de hover */
+}
+
+/* Efecto al pasar el ratón sobre las tarjetas */
+.cv-card:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
+}

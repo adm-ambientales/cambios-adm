@@ -1,0 +1,85 @@
+/* Footer */
+footer {
+    background: #8DB600;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    
+    footer p {
+        font-size: 14px;
+    }
+    
+    /* Media Queries para móviles */
+    @media (max-width: 768px) {
+        .service {
+            flex-basis: 100%;
+        }
+    }
+    
+    
+    .divider {
+    height: 5px; /* Grosor de la línea */
+    background: linear-gradient(to right, rgba(40, 167, 69, 1), rgba(76, 175, 80, 0.8), rgba(40, 167, 69, 1)); /* Gradiente suave */
+    margin: 40px 0; /* Espaciado superior e inferior */
+    border: none; /* Sin bordes adicionales */
+    border-radius: 10px; /* Bordes redondeados */
+    position: relative; /* Para permitir la adición de efectos */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 
+            0 0 20px rgba(40, 167, 69, 0.7), /* Sombra para profundidad y brillo */
+            0 0 40px rgba(40, 167, 69, 0.4); /* Efecto de resplandor suave */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    }
+    
+    .divider:hover {
+    transform: scaleY(1.1); /* Aumenta la altura ligeramente al pasar el ratón */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), 
+            0 0 30px rgba(40, 167, 69, 0.9), /* Aumenta el resplandor al pasar el ratón */
+            0 0 50px rgba(40, 167, 69, 0.6);
+    }
+    
+    /* Efecto de brillo en la parte superior de la línea */
+    .divider::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Ajusta la posición para que esté justo encima */
+    left: 0;
+    right: 0;
+    height: 5px; /* Grosor del brillo */
+    background: rgba(255, 255, 255, 0.2); /* Brillo blanco suave */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Efecto de brillo */
+    opacity: 0.5; /* Ligera transparencia */
+    transition: opacity 0.3s ease; /* Transición suave */
+    }
+    
+    .divider:hover::before {
+    opacity: 1; /* Brillo más fuerte al pasar el ratón */
+    }
+    
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 2000px; /* Solo para mostrar el efecto de desplazamiento */
+    }
+    
+    .whatsapp-bar {
+        position: fixed;
+        bottom: 20px; /* Espacio desde el fondo */
+        right: 20px; /* Espacio desde la derecha */
+        background-color: #25D366; /* Color de fondo de WhatsApp */
+        color: white; /* Color del texto */
+        padding: 10px 15px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+        cursor: pointer; /* Cambia el cursor al pasar sobre la barra */
+        text-align: center; /* Centra el texto */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    }
+    
+    .whatsapp-bar:hover {
+        background-color: #128C7E; /* Cambia el color al pasar el ratón */
+    }
